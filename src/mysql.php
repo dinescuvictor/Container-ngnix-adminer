@@ -1,5 +1,5 @@
        <?php
-        $connection = new PDO('mysql:host=mysql;dbname=demo;charset=utf8', 'root', 'root');
+        $connection = new PDO('mysql:host=206.81.27.146;dbname=demo;charset=utf8', 'root', 'root');
         $query      = $connection->query("SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'demo'");
         $tables     = $query->fetchAll(PDO::FETCH_COLUMN);
 
