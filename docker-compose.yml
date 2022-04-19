@@ -26,9 +26,16 @@ services:
   # Adminer Service    
   adminer:
     image: adminer:4.8.1
+    environment:
+      PMA_HOST: mysql
     ports:
       - 8080:8080
+    networks:
+      - web
 
-
+  # Networks
+  networks:
+    web:
+      external: true
 
 
