@@ -1,12 +1,12 @@
        <?php
-        $connection = new PDO('mysql:host=206.81.27.146;dbname=demo;charset=utf8', 'root', 'root');
-        $query      = $connection->query("SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'demo'");
+        $connection = new PDO('mysql:host=206.81.27.146;dbname=universitate;charset=utf8', 'root', 'root');
+        $query      = $connection->query("SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'universitate'");
         $tables     = $query->fetchAll(PDO::FETCH_COLUMN);
 
         if (empty($tables)) {
-            echo '<p class="center">Nu exita table in baza de date <code>demo</code>.</p>';
+            echo '<p class="center">Nu exita table in baza de date <code>universitate</code>.</p>';
         } else {
-            echo '<p class="center">Baza de date demo conține urătoarele tabele:</p>';
+            echo '<p class="center">Baza de date universitate conține urătoarele tabele:</p>';
             echo '<ul class="center">';
             foreach ($tables as $table) {
                 echo "<li>{$table}</li>";
