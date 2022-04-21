@@ -27,7 +27,7 @@ services:
   adminer:
     image: adminer:4.8.1
     environment:
-      PMA_HOST: mysql
+      PMA_HOST: '206.81.27.146'
     ports:
       - 8080:8080
     networks:
